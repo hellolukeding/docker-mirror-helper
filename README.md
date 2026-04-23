@@ -161,6 +161,14 @@ bash docker-mirror-helper/scripts/docker_mirror_api.sh image 'python:3.12-slim' 
 bash docker-mirror-helper/scripts/docker_mirror_api.sh error
 ```
 
+Or run the repository validation script:
+
+也可以直接运行仓库自带的校验脚本：
+
+```bash
+bash scripts/validate.sh
+```
+
 If you are using Codex and have the local skill validation tool available, you can also run that validator against `docker-mirror-helper/`.
 
 如果你在 Codex 环境里，并且本地有 skill 校验工具，也可以额外对 `docker-mirror-helper/` 做结构校验。

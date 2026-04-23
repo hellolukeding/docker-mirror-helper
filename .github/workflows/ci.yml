@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install shell tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          curl -fsSL https://github.com/mvdan/sh/releases/download/v3.8.0/shfmt_v3.8.0_linux_amd64 -o shfmt
+          chmod +x shfmt
+          sudo mv shfmt /usr/local/bin/shfmt
+
+      - name: Run shellcheck
+        run: shellcheck docker-mirror-helper/scripts/docker_mirror_api.sh scripts/validate.sh
+
+      - name: Check shell formatting
+        run: shfmt -d docker-mirror-helper/scripts/docker_mirror_api.sh scripts/validate.sh
+
+      - name: Run local validation script
+        run: bash scripts/validate.sh
