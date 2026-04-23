@@ -1,0 +1,5 @@
+services:
+  app:
+    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/library/nginx:1.27
+    ports:
+      - "8080:80"
