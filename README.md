@@ -10,6 +10,27 @@
 >
 > 一个轻量、双语、纯 shell 优先的 skill，用于基于公开镜像站 [docker.aityp.com](https://docker.aityp.com/) 查询镜像、改写镜像引用，并处理常见拉取和同步问题。
 
+## Install | 安装方法
+
+### Install In Codex | 在 Codex 中安装
+
+Place the `docker-mirror-helper/` folder under your Codex skills directory:
+
+把 `docker-mirror-helper/` 目录复制到你的 Codex skills 目录中：
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R docker-mirror-helper "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+### Installation Prompt | 安装提示词
+
+```text
+Please install the skill from this repository into my Codex skills directory. Repository URLs: https://github.com/hellolukeding/docker-mirror-helper.git , git@github.com:hellolukeding/docker-mirror-helper.git . You can also clone it with: gh repo clone hellolukeding/docker-mirror-helper . After cloning, copy the `docker-mirror-helper/` folder into my Codex skills directory.
+
+请帮我把这个仓库里的 skill 安装到我的 Codex skills 目录。仓库地址：https://github.com/hellolukeding/docker-mirror-helper.git ，SSH 地址：git@github.com:hellolukeding/docker-mirror-helper.git 。也可以使用 `gh repo clone hellolukeding/docker-mirror-helper` 进行克隆。克隆完成后，请把 `docker-mirror-helper/` 目录复制到我的 Codex skills 目录中。
+```
+
 ## Overview | 项目简介
 
 This repository ships a reusable skill folder for Codex and other AI assistants that can read files and execute shell commands.
@@ -74,25 +95,6 @@ bash docker-mirror-helper/scripts/docker_mirror_api.sh website
 bash docker-mirror-helper/scripts/docker_mirror_api.sh health
 bash docker-mirror-helper/scripts/docker_mirror_api.sh image 'python:3.12-slim' docker.io linux/amd64
 bash docker-mirror-helper/scripts/docker_mirror_api.sh error
-```
-
-### Install In Codex | 在 Codex 中安装
-
-Place the `docker-mirror-helper/` folder under your Codex skills directory:
-
-把 `docker-mirror-helper/` 目录复制到你的 Codex skills 目录中：
-
-```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R docker-mirror-helper "${CODEX_HOME:-$HOME/.codex}/skills/"
-```
-
-### Installation Prompt | 安装提示词
-
-```text
-Please install the skill from this repository into my Codex skills directory. Repository URLs: https://github.com/hellolukeding/docker-mirror-helper.git , git@github.com:hellolukeding/docker-mirror-helper.git . You can also clone it with: gh repo clone hellolukeding/docker-mirror-helper . After cloning, copy the `docker-mirror-helper/` folder into my Codex skills directory.
-
-请帮我把这个仓库里的 skill 安装到我的 Codex skills 目录。仓库地址：https://github.com/hellolukeding/docker-mirror-helper.git ，SSH 地址：git@github.com:hellolukeding/docker-mirror-helper.git 。也可以使用 `gh repo clone hellolukeding/docker-mirror-helper` 进行克隆。克隆完成后，请把 `docker-mirror-helper/` 目录复制到我的 Codex skills 目录中。
 ```
 
 ### Example Requests | 示例请求
