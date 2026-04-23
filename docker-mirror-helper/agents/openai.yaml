@@ -1,0 +1,7 @@
+interface:
+  display_name: "Docker Mirror Helper"
+  short_description: "Query and rewrite Docker mirror usage"
+  default_prompt: "Use $docker-mirror-helper to find, rewrite, or troubleshoot mirrored Docker image references."
+
+policy:
+  allow_implicit_invocation: true
