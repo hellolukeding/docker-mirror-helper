@@ -80,7 +80,8 @@ main() {
       local search="$1"
       local site="${2-}"
       local platform="${3-}"
-      local query="?search=$(urlencode "$search")"
+      local query
+      query="?search=$(urlencode "$search")"
       if [[ -n "$site" ]]; then
         query="${query}&site=$(urlencode "$site")"
       fi

@@ -1,0 +1,44 @@
+name: Feature request
+description: Suggest an improvement for the skill, docs, examples, or validation flow
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea for `docker-mirror-helper`.
+        Please focus on the user problem first, then suggest the change.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: It is difficult to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What change would you like?
+      placeholder: I would like the project to add...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional, but helpful if you explored another path.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area would this improve?
+      options:
+        - Shell helper
+        - SKILL.md
+        - References
+        - README
+        - Examples
+        - CI
+        - Contribution workflow
+    validations:
+      required: true

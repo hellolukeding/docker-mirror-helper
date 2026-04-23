@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a bug in the skill, shell helper, documentation, or examples
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem with `docker-mirror-helper`.
+        Please include enough detail for us to reproduce it.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly.
+      placeholder: The shell helper returned an unexpected result for...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      description: Include commands, files, or prompts when possible.
+      placeholder: |
+        1. Run ...
+        2. Query ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is affected?
+      options:
+        - Shell helper
+        - SKILL.md
+        - References
+        - README
+        - Examples
+        - CI
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context
+      description: Add API responses, screenshots, environment notes, or links if useful.

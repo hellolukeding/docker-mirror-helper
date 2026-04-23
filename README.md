@@ -190,3 +190,4 @@ If you are using Codex and have the local skill validation tool available, you c
 - Skill: [`docker-mirror-helper/SKILL.md`](docker-mirror-helper/SKILL.md)
 - Shell helper: [`docker-mirror-helper/scripts/docker_mirror_api.sh`](docker-mirror-helper/scripts/docker_mirror_api.sh)
 - Design spec: [`docs/superpowers/specs/2026-04-23-docker-mirror-helper-design.md`](docs/superpowers/specs/2026-04-23-docker-mirror-helper-design.md)
+- Contributing guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
